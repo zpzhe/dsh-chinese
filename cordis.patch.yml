@@ -1,0 +1,15 @@
+# @local/dsh-chinese —— 全中文模式
+# 一条 Host 行同时携带 Host 半部（host2.js）与 Client 半部（client.js）：
+# 包清单里的 dsh.client 段由 clientModules 自动扫描并注入页面，无需第二行。
+#
+# 可选配置（写在 config 下，写在此处的用户补丁层会在升级后保留）：
+#   languagePolicy: true          # 注入「思考/回复/调用一律中文」的语言约定
+#   chineseToolNames: true        # 注册中文别名工具（中文名 + 中文参数名）
+#   hideEnglishTools: true        # 在每个 Agent 上隐藏被映射的英文原名
+#   chineseQuickReference: true   # 注入中文工具速查表
+#   switchUiLocale: false         # 是否强制把界面语言切到中文（见 README）
+#   uiLocale: zh-CN
+- insert:
+    - id: dsh-chinese
+      name: '@local/dsh-chinese'
+      config: {}

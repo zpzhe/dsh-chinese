@@ -1,0 +1,31 @@
+{
+  "name": "@local/dsh-chinese",
+  "version": "1.0.2",
+  "private": true,
+  "type": "module",
+  "description": "让 DeepSeek Harness 的思考、回复、工具定义、工具调用与 Web 界面文案全部使用中文。",
+  "exports": {
+    ".": "./host2.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "host2.js",
+    "catalog.js",
+    "client.js",
+    "cordis.patch.yml",
+    "selftest.mjs",
+    "README.md",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}

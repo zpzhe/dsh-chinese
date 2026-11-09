@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Full Chinese mode",
+    "description": "Makes the agent think, reply, define and call tools, and label its Web UI in Simplified Chinese."
+  }
+}
